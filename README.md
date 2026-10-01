@@ -1204,130 +1204,7 @@ The API uses appropriate HTTP status codes.
 | 409  | Duplicate/conflicting resource        |
 | 422  | Validation error                      |
 
----
-
-# 36. Example Validation Error
-
-Invalid phone number:
-
-```json
-{
-  "phone": "123"
-}
-```
-
-Response:
-
-```text
-422 Unprocessable Entity
-```
-
----
-
-# 37. Example Unauthorized Response
-
-Missing/invalid JWT:
-
-```json
-{
-  "detail": "Invalid or expired token"
-}
-```
-
-Status:
-
-```text
-401 Unauthorized
-```
-
----
-
-# 38. Example Forbidden Response
-
-Employee attempting an Admin-only operation:
-
-```json
-{
-  "detail": "Insufficient permissions"
-}
-```
-
-Status:
-
-```text
-403 Forbidden
-```
-
----
-
-# 39. Reports
-
-Reports are available to Admin and HR.
-
-## Dashboard
-
-```http
-GET /reports/dashboard
-```
-
-Dashboard includes:
-
-* Total employees
-* Active employees
-* Employees per department
-* Pending leave requests
-* Employees on leave today
-
-Example:
-
-```json
-{
-  "total_employees": 10,
-  "active_employees": 9,
-  "employees_per_department": {
-    "IT": 5,
-    "HR": 2,
-    "Finance": 3
-  },
-  "pending_leave_requests": 2,
-  "employees_on_leave_today": 1
-}
-```
-
----
-
-# 40. Leave Summary
-
-```http
-GET /reports/leave-summary
-```
-
-Example:
-
-```http
-GET /reports/leave-summary?month=10&year=2026
-```
-
-Example response:
-
-```json
-[
-  {
-    "leave_type": "Sick",
-    "status": "Approved",
-    "count": 5
-  },
-  {
-    "leave_type": "Casual",
-    "status": "Pending",
-    "count": 3
-  }
-]
-```
-
----
-
-# 41. Complete Beginner Testing Order
+# 36. Complete Beginner Testing Order
 
 Use Swagger in this order:
 
@@ -1365,7 +1242,7 @@ Use Swagger in this order:
 
 ---
 
-# 42. Running the Project
+# 37. Running the Project
 
 Every time you want to run the project:
 
@@ -1403,7 +1280,7 @@ http://127.0.0.1:8000/docs
 
 ---
 
-# 43. Stopping the Server
+# 38. Stopping the Server
 
 In the terminal press:
 
@@ -1415,7 +1292,7 @@ The FastAPI server will stop.
 
 ---
 
-# 44. Updating Database Models
+# 39. Updating Database Models
 
 When a model is changed:
 
@@ -1439,7 +1316,7 @@ for this project because database schema changes are managed through Alembic.
 
 ---
 
-# 45. Useful Alembic Commands
+# 40. Useful Alembic Commands
 
 Check current migration:
 
@@ -1467,7 +1344,7 @@ alembic downgrade -1
 
 ---
 
-# 46. Useful FastAPI Commands
+# 41. Useful FastAPI Commands
 
 Start normally:
 
@@ -1489,7 +1366,7 @@ uvicorn app.main:app --reload --port 8001
 
 ---
 
-# 47. Common Beginner Errors
+# 42. Common Beginner Errors
 
 ## Error: `ModuleNotFoundError`
 
@@ -1603,7 +1480,7 @@ Invalid enum value
 
 ---
 
-# 48. Security Notes
+# 43. Security Notes
 
 Do not commit:
 
@@ -1629,7 +1506,7 @@ Do not share your:
 
 ---
 
-# 49. Example Complete Workflow
+# 44. Example Complete Workflow
 
 ### Admin
 
@@ -1685,7 +1562,7 @@ View Leave Summary
 
 ---
 
-# 50. Project Status
+# 45. Project Status
 
 This project demonstrates:
 
@@ -1712,7 +1589,7 @@ This project demonstrates:
 
 ---
 
-# 51. Author
+# 46. Author
 
 **Employee & Leave Management System**
 
